@@ -1,0 +1,59 @@
+-- phpMyAdmin SQL Dump
+-- version 4.9.7
+-- https://www.phpmyadmin.net/
+--
+-- Host: localhost:8889
+-- Generation Time: Jul 01, 2021 at 06:00 PM
+-- Server version: 5.7.32
+-- PHP Version: 7.4.12
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET time_zone = "+00:00";
+
+--
+-- Database: `publications`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `publication`
+--
+
+CREATE TABLE `publication` (
+  `id` int(11) NOT NULL,
+  `title` varchar(256) NOT NULL,
+  `type` varchar(30) DEFAULT NULL,
+  `content` varchar(2000) NOT NULL,
+  `authorName` varchar(50) NOT NULL,
+  `date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `publication`
+--
+
+INSERT INTO `publication` (`id`, `title`, `type`, `content`, `authorName`, `date`) VALUES
+(3, 'Updated contract schedules from 1 September 2021)', 'NewsPublication', 'We will soon be issuing new civil contract schedules beginning on 1 September 2021. These will replace the current third year schedules for the 2018 Standard Civil Contract which are ending on 31 August 2021. All schedules will run for 12 months.', 'Legal Aid Agency', '2021-07-01 15:45:06'),
+(4, 'Seattle Expansion Draft Series: Article 18 - Updates and Final Predicted Protection List', 'ArticlePublication', 'Welcome back to our Seattle Expansion Draft Series. If you haven’t read the first article that lays out the rules of the expansion draft, that would be a good starting point, as I’ll only give the very basic rules in each of these follow up articles. If you are interested in Detroit, that was the second article and the seventh article.\r\n\r\nWe have made it! I’ll be honest, at parts of this journey I doubted we would ever reach the end of the series. And we’re not quite there, but we are close.', ' PeterWiiM', '2021-07-01 15:47:18'),
+(5, 'PHOTO REPORT: EPCOT 6/29/21', 'PhotoReportPublication', 'Hello from a grey and stormy day here at EPCOT! We ventured out into the weather to see what new things we could find for you today, and we are glad that we did! Let’s get started. On our way into the park, we spotted some Cast Members up on the Monorail station and coming down to the exit. ', 'Noelle Burk', '2021-07-01 15:50:34');
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `publication`
+--
+ALTER TABLE `publication`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `publication`
+--
+ALTER TABLE `publication`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
